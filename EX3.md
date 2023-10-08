@@ -125,7 +125,7 @@ insert into salesperson(salesid,city,salesname,commission)values(4,'nungambakkam
 ### Q7) Write a SQL query to find the salesperson and customer who reside in the same city. Return Salesman, cust_name and city.
 
 ### QUERY:
-`SELECT S.name AS Salesman, C.cust_name, C.city FROM Salesman1 S ,Customer1 C where S.city = C.city;`
+`select salesperson.salesname AS "Salesman", customer1.cusname as "Customer Name", salesperson.city AS "City" from salesperson inner join customer1 on salesperson.city=customer1.city;
 
 ### OUTPUT:
 ![image](https://github.com/Vijisdurai/EX-3-SubQueries-Views-and-Joins/assets/118343184/bda2c8b9-36d7-4fdc-aada-4b45e3675b05)
@@ -133,14 +133,14 @@ insert into salesperson(salesid,city,salesname,commission)values(4,'nungambakkam
 ### Q8) Write a SQL query to find salespeople who received commissions of more than 13 percent from the company. Return Customer Name, customer city, Salesman, commission.
 
 ### QUERY:
-`SELECT c.cust_name AS CustomerName, c.city AS CustomerCity, s.name AS Salesman, s.commission FROM Salesman1 s JOIN Customer1 c ON s.salesman_id = c.salesman_id WHERE s.commission > 0.13;`
+select customer1.cusname as "Customer Name",customer1.city as "Customer City",salesperson.salesname AS "Salesman",salesperson.commission as "Commission" from salesperson inner join customer1 on salesperson.salesid=customer1.salesid where salesperson.commission>400;
 ### OUTPUT:
 ![image](https://github.com/Vijisdurai/EX-3-SubQueries-Views-and-Joins/assets/118343184/9fab71d6-4926-45cc-a14c-f4e915737c01)
 
 ### Q9) Perform Natural join on both tables
 
 ### QUERY:
-`SELECT * FROM Salesman1 NATURAL JOIN Customer1;`
+` select customer1.cusname as "Customer Name",customer1.city as "Customer City",salesperson.salesname AS "Salesman",salesperson.commission as "Commission" from salesperson inner join customer1 on salesperson.salesid=customer1.salesid where salesperson.commission>400;
 ### OUTPUT:
 ![image](https://github.com/Vijisdurai/EX-3-SubQueries-Views-and-Joins/assets/118343184/57496838-4974-40e7-8e50-8742f95b6c93)
 
@@ -148,7 +148,7 @@ insert into salesperson(salesid,city,salesname,commission)values(4,'nungambakkam
 
 ### QUERY:
 `-- Left Join
-SELECT * FROM Customer1 LEFT JOIN Salesman1 ON Customer1.salesman_id = Salesman1.salesman_id;`
+select * from salesperson left join customer1 on salesperson.city=customer1.city;
 ### OUTPUT:
 ![image](https://github.com/Vijisdurai/EX-3-SubQueries-Views-and-Joins/assets/118343184/af6f1c36-74fa-44ba-a208-7a5bfb1bb4e3)
 ![image](https://github.com/Vijisdurai/EX-3-SubQueries-Views-and-Joins/assets/118343184/27e58da8-d845-402f-a850-f01e138ea285)
