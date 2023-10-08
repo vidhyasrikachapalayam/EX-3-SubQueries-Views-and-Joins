@@ -44,6 +44,7 @@ insert into dept (deptno,deptname,loc) values (4,'marketing','delhi');
 `create view minimum as select name,job,sal from emp where sal =(select min(sal) from emp);`
 
 ### OUTPUT:
+![d3(1](https://github.com/vidhyasrikachapalayam/EX-3-SubQueries-Views-and-Joins/assets/119477817/290a83fb-e73f-4afe-b005-d290d7506852)
 
 
 ### Q2) List the ename,job,sal of the employee who get minimum salary in the company.
@@ -52,7 +53,7 @@ insert into dept (deptno,deptname,loc) values (4,'marketing','delhi');
 `SELECT ename, job, sal FROM emp WHERE sal = (SELECT MIN(sal) FROM emp);`
 
 ### OUTPUT:
-![image](https://github.com/Vijisdurai/EX-3-SubQueries-Views-and-Joins/assets/118343184/a1905da6-3702-4cea-9399-e734c1177c31)
+
 
 ### Q3) List ename, job of the employees who work in deptno 10 and his/her job is any one of the job in the department ‘SALES’.
 
