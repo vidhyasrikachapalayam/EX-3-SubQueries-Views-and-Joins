@@ -53,6 +53,7 @@ insert into dept (deptno,deptname,loc) values (4,'marketing','delhi');
 `SELECT ename, job, sal FROM emp WHERE sal = (SELECT MIN(sal) FROM emp);`
 
 ### OUTPUT:
+![image](https://github.com/vidhyasrikachapalayam/EX-3-SubQueries-Views-and-Joins/assets/119477817/043c5dd4-f3f2-4176-942e-f47186183a6f)
 
 
 ### Q3) List ename, job of the employees who work in deptno 10 and his/her job is any one of the job in the department ‘SALES’.
@@ -62,7 +63,8 @@ insert into dept (deptno,deptname,loc) values (4,'marketing','delhi');
  select name,job from emp where  deptno=12 and job='manager';
 
 ### OUTPUT:
-![image](https://github.com/Vijisdurai/EX-3-SubQueries-Views-and-Joins/assets/118343184/b73b3be5-34d2-49a1-8f49-6954fce4005e)
+![d3(3)](https://github.com/vidhyasrikachapalayam/EX-3-SubQueries-Views-and-Joins/assets/119477817/17399b2e-840a-498d-97e8-393bc692b628)
+
 
 ### Q4) Create a view empv5 (for the table emp) that contains empno, ename, job of the employees who work in dept 10.
 
@@ -71,7 +73,8 @@ create view empv5 as select empno,name,job from emp where deptno=22;
 
 
 ### OUTPUT:
-![image](https://github.com/Vijisdurai/EX-3-SubQueries-Views-and-Joins/assets/118343184/5ecfa3f9-d721-4c1a-b188-20afedf06b9b)
+![d3(4)](https://github.com/vidhyasrikachapalayam/EX-3-SubQueries-Views-and-Joins/assets/119477817/01d318c1-b34d-4371-9643-6de2f179c3e4)
+
 
 ### Q5) Create a view with column aliases empv30 that contains empno, ename, sal of the employees who work in dept 30. Also display the contents of the view.
 
@@ -80,7 +83,8 @@ create view empv30 as select empno,name,sal from emp where deptno=24;
 `
 
 ### OUTPUT:
-![image](https://github.com/Vijisdurai/EX-3-SubQueries-Views-and-Joins/assets/118343184/7ef70314-9268-447b-bfc8-ec25022e41a3)
+![d3(5](https://github.com/vidhyasrikachapalayam/EX-3-SubQueries-Views-and-Joins/assets/119477817/6ab5f93b-765d-4b0f-9036-07933d620c82)
+
 
 ### Q6) Update the view empv5 by increasing 10% salary of the employees who work as ‘CLERK’. Also confirm the modifications in emp table
 
@@ -88,9 +92,7 @@ create view empv30 as select empno,name,sal from emp where deptno=24;
 update emp set sal=sal*1.1 where job='clerk';
 
 ### OUTPUT:
-![image](https://github.com/Vijisdurai/EX-3-SubQueries-Views-and-Joins/assets/118343184/131f9fca-ad86-4394-9c5c-815b8ca198df)
-![image](https://github.com/Vijisdurai/EX-3-SubQueries-Views-and-Joins/assets/118343184/4e4700df-464b-4829-85ea-f66e465dc6ca)
-![image](https://github.com/Vijisdurai/EX-3-SubQueries-Views-and-Joins/assets/118343184/86731a8b-570a-40da-8cca-681de0b54d4f)
+![d3(6](https://github.com/vidhyasrikachapalayam/EX-3-SubQueries-Views-and-Joins/assets/119477817/829b5d96-bccb-4dd4-8003-6b35c30cb6d7)
 
 ## Create a Customer1 Table
 ```sql
@@ -129,21 +131,24 @@ insert into salesperson(salesid,city,salesname,commission)values(4,'nungambakkam
 `select salesperson.salesname AS "Salesman", customer1.cusname as "Customer Name", salesperson.city AS "City" from salesperson inner join customer1 on salesperson.city=customer1.city;
 
 ### OUTPUT:
-![image](https://github.com/Vijisdurai/EX-3-SubQueries-Views-and-Joins/assets/118343184/bda2c8b9-36d7-4fdc-aada-4b45e3675b05)
+![d3(7](https://github.com/vidhyasrikachapalayam/EX-3-SubQueries-Views-and-Joins/assets/119477817/8f35c15f-75d8-48d6-8b22-f2641c9ddbc7)
+
 
 ### Q8) Write a SQL query to find salespeople who received commissions of more than 13 percent from the company. Return Customer Name, customer city, Salesman, commission.
 
 ### QUERY:
 select customer1.cusname as "Customer Name",customer1.city as "Customer City",salesperson.salesname AS "Salesman",salesperson.commission as "Commission" from salesperson inner join customer1 on salesperson.salesid=customer1.salesid where salesperson.commission>400;
 ### OUTPUT:
-![image](https://github.com/Vijisdurai/EX-3-SubQueries-Views-and-Joins/assets/118343184/9fab71d6-4926-45cc-a14c-f4e915737c01)
+![d3(8](https://github.com/vidhyasrikachapalayam/EX-3-SubQueries-Views-and-Joins/assets/119477817/d17b3d0e-fe4b-4c3f-ab78-a51535260c8b)
+
 
 ### Q9) Perform Natural join on both tables
 
 ### QUERY:
 ` select customer1.cusname as "Customer Name",customer1.city as "Customer City",salesperson.salesname AS "Salesman",salesperson.commission as "Commission" from salesperson inner join customer1 on salesperson.salesid=customer1.salesid where salesperson.commission>400;
 ### OUTPUT:
-![image](https://github.com/Vijisdurai/EX-3-SubQueries-Views-and-Joins/assets/118343184/57496838-4974-40e7-8e50-8742f95b6c93)
+![d3(9](https://github.com/vidhyasrikachapalayam/EX-3-SubQueries-Views-and-Joins/assets/119477817/df49b919-ccd8-47d4-b14e-a2d10027c75e)
+
 
 ### Q10) Perform Left and right join on both tables
 
@@ -151,6 +156,8 @@ select customer1.cusname as "Customer Name",customer1.city as "Customer City",sa
 `-- Left Join
 select * from salesperson left join customer1 on salesperson.city=customer1.city;
 ### OUTPUT:
-![image](https://github.com/Vijisdurai/EX-3-SubQueries-Views-and-Joins/assets/118343184/af6f1c36-74fa-44ba-a208-7a5bfb1bb4e3)
-![image](https://github.com/Vijisdurai/EX-3-SubQueries-Views-and-Joins/assets/118343184/27e58da8-d845-402f-a850-f01e138ea285)
-![image](https://github.com/Vijisdurai/EX-3-SubQueries-Views-and-Joins/assets/118343184/f3040739-6bdf-4542-9b34-9c2c63468054)
+![d3(10](https://github.com/vidhyasrikachapalayam/EX-3-SubQueries-Views-and-Joins/assets/119477817/e197842f-7b0d-473c-8d14-f8b3ad8cfe54)
+![d3(11](https://github.com/vidhyasrikachapalayam/EX-3-SubQueries-Views-and-Joins/assets/119477817/64853434-8d71-4da8-bcff-44b95cef15bb)
+
+
+
