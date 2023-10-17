@@ -158,6 +158,7 @@ select * from salesperson left join customer1 on salesperson.city=customer1.city
 ### OUTPUT:
 ![d3(10](https://github.com/vidhyasrikachapalayam/EX-3-SubQueries-Views-and-Joins/assets/119477817/e197842f-7b0d-473c-8d14-f8b3ad8cfe54)
 ![d3(11](https://github.com/vidhyasrikachapalayam/EX-3-SubQueries-Views-and-Joins/assets/119477817/64853434-8d71-4da8-bcff-44b95cef15bb)
-
+### Result:
+Thus the dml command executed successfully.
 
 
