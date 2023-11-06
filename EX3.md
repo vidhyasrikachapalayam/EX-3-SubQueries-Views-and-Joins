@@ -1,6 +1,7 @@
 # EX 3 SubQueries, Views and Joins 
-
-
+## DATE:29/8/23
+## AIM:
+To create a database and execute DDL queries like views and joins using SQL.
 ## Create employee Table
 ```sql
 create table emp (empno int(10) primary key,name char(30),job char(30),sal int(10),deptno int(8));
